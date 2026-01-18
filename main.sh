@@ -6,7 +6,8 @@ echo "Enter an arithmetic operation:"
 read -r operation
 
 if [[ "$operation" =~ $operation_regex ]]; then
-  echo "Operation check passed!"
+  arithmetic_result=$(( operation ))
+  printf "%s\n" "$arithmetic_result"
 else
   echo "Operation check failed!"
 fi
